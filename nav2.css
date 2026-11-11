@@ -1,0 +1,87 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+.logo{
+    font-weight: 900;
+    font-size: 24px;
+    color: orange;
+}
+nav a{
+    margin: 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 15px;
+}
+a:hover{
+    background-color: orange;
+}
+.mae1{
+   margin: auto;
+    display: flex;
+    width: 60%;
+    align-items: center;
+    gap: 70px;
+    
+
+}
+.filha1{
+    text-align:left;
+    flex: 1;
+    
+}
+.filha2 img{
+    border-radius: 20px;
+    width: 400px;
+    height: 170px;
+}
+button{
+    border-radius: 20px;
+    background-color: orange;
+    color: white;
+    border: white;
+    height: 30px;
+    width: 200px;
+}
+.titulo2{
+     text-align: center;
+    padding-top: 50px;
+}
+.mae2{
+    margin: auto;
+    width: 60%;
+    align-items: center;
+    display: flex;
+    gap: 100px;
+    padding-top: 30px;
+}
+.filha3{
+    width: 220px;
+    height: 80px;
+    border-bottom: 5px solid blue;
+    border-radius: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.filha4{
+    width: 220px;
+    height: 80px;
+    border-bottom: 5px solid red;
+    border-radius: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.filha5{
+    width: 220px;
+    height: 80px;
+    border-bottom: 5px solid plum;
+    border-radius: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}

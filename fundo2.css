@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 58px 7%;
+    color: white;
+    background: linear-gradient(110deg, #0800d5, #02002f 78%);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+    margin-top: 32px;
+    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+}
+
+.anuncios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13%;
+    max-width: 1435px;
+    margin: 68px auto 0;
+}
+
+.anuncio {
+    min-height: 427px;
+}
+
+.anuncio h3 {
+    padding: 5px 12px 7px;
+    color: white;
+    background: #292727;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    text-align: center;
+}
+
+.anuncio p {
+    min-height: 366px;
+    padding: 16px 11px;
+    font-size: clamp(1rem, 1.7vw, 1.45rem);
+    font-weight: bold;
+    line-height: 1.28;
+}
+
+.anuncio--saude-1 p {
+    background: #ff0505;
+}
+
+.anuncio--saude-2 p {
+    background: #0808d8;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 32px 20px;
+    }
+
+    .anuncios {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 40px;
+    }
+
+    .anuncio,
+    .anuncio p {
+        min-height: 0;
+    }
+}
+

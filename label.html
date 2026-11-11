@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> Tipo de Calculo </label>
+    <select id="Tipo" onchange="verificaOpcao()">
+
+        <option value=""> Selecione </option>
+        <option value="som"> Somar </option>
+        <option value="sub"> Subtrair </option>
+        <option value="mult"> Multiplicar </option>
+        <option value="div"> Dividir </option>
+
+    </select>
+
+    <div id="blocoCaixa" style="display: none;margin-top: 10px;">
+       <label> Numero 1 </label>
+       <input id="num1" type="text" placeholder="Digite aqui ...">
+       <label> Numero 2 </label>
+       <input id="num2" type="text" placeholder="Digite aqui ...">
+    </div>
+
+    <div id="botaosoma" style="display: none; margin-top: 20px;" >
+       <button> Somar </button>
+    </div>
+     <div id="botaosub" style="display: none; margin-top: 20px;" >
+       <button> Subtrair </button>
+    </div>
+     <div id="botaomult" style="display: none; margin-top: 20px;" >
+       <button> Multiplicar </button>
+    </div>
+     <div id="botaodiv" style="display: none; margin-top: 20px;" >
+       <button> Dividir </button>
+    </div>
+    <h1 id="res"></h1>
+    
+
+</body>
+
+<script>
+    const btnS = document.getElementById('botaosoma')
+    btnS.addEventListener('click', function() {
+        let n1 = parseInt(document.getElementById('num1').value)
+        let n2 = parseInt(document.getElementById('num2').value)
+        document.getElementById('res').textContent = "Resultado: " + (n1 + n2)
+    })
+    const btnSub= document.getElementById('botaosub')
+    btnSub.addEventListener('click', function() {
+        let n1 = parseInt(document.getElementById('num1').value)
+        let n2 = parseInt(document.getElementById('num2').value)
+        document.getElementById('res').textContent = "Resultado: " + (n1 - n2)
+    })
+    const btnM = document.getElementById('botaomult')
+    btnM.addEventListener('click', function() {
+        let n1 = parseInt(document.getElementById('num1').value)
+        let n2 = parseInt(document.getElementById('num2').value)
+        document.getElementById('res').textContent = "Resultado: " + (n1 * n2)
+    })
+    const btnD = document.getElementById('botaodiv')
+    btnD.addEventListener('click', function() {
+        let n1 = parseInt(document.getElementById('num1').value)
+        let n2 = parseInt(document.getElementById('num2').value)
+        document.getElementById('res').textContent = "Resultado: " + (n1 / n2)
+    })
+
+
+
+    function verificaOpcao(){
+        const selectPrincipal = document.getElementById('Tipo').value
+        const blocoOutro = document.getElementById('blocoCaixa')
+         const botoes = ['botaosoma', 'botaosub', 'botaomult', 'botaodiv']
+
+        botoes.forEach(id => {
+            document.getElementById(id).style.display = 'none'
+        })
+        if (selectPrincipal == 'som'){
+            blocoOutro.style.display = 'block'
+            botaosoma.style.display = 'block'
+        }
+        else if (selectPrincipal == 'sub'){
+            blocoOutro.style.display = 'block'
+            botaosub.style.display = 'block'
+        }
+         else if (selectPrincipal == 'mult'){
+            blocoOutro.style.display = 'block'
+            botaomult.style.display = 'block'
+        }
+         else if (selectPrincipal == 'div'){
+            blocoOutro.style.display = 'block'
+            botaodiv.style.display = 'block'
+        }
+    }
+</script>
+
+</html>

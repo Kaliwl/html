@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    padding: 20px 5%;
+    background-color: beige;
+    height: 80px;
+    width: 100%;
+}
+.logo{
+    font-weight: 900;
+    font-size: 40px;
+    color: brown;
+}
+.seçao1{
+    background-color: brown;
+    width: 100%;
+    height: 400px;
+    padding: 10px 15px 38px;
+    margin: auto;
+    gap: 70px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 12px;
+    align-content: center;
+    align-items: center;
+    color: black;
+}
+.seçao1 h1{
+    grid-column: 1;
+    grid-row: 1;
+}
+.seçao1 h2{
+    grid-column: 1;
+    grid-row: 2;
+}
+.seçao1 p{
+    grid-column: 1;
+    grid-row: 3;
+}
+.seçao1 button{
+    grid-column: 1;
+    grid-row: 4;
+}
+.seçao1 img{
+    grid-column: 2;
+    grid-row: 1 / 5;
+    justify-self: end;
+    width: 300px;
+    height: 200px;
+}
+
+@media (max-width: 700px){
+    .seçao1{
+        height: auto;
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .seçao1 h1,
+    .seçao1 h2,
+    .seçao1 p,
+    .seçao1 button,
+    .seçao1 img{
+        grid-column: 1;
+    }
+    .seçao1 img{
+        grid-row: 5;
+        justify-self: start;
+    }
+}
+button{
+    border-radius: 20px;
+    background-color: #7e8c54;
+    color: black;
+    border: white;
+    height: 50px;
+    width: 200px;
+}
+.seçao2{
+    background-color: #7e8c54;
+    
+}
+.seçao2 h1{
+    grid-column: 1;
+    grid-row: 1;
+}
+.menu{
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+}
+.menu img{
+    width: 300px;
+    height: 200px;
+}
+figure{
+    background-color: brown;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    margin: 15px auto;
+}
+
+figcaption{
+    padding: 5px;
+    text-align: center;
+    color: black;
+}
+.seçao3{
+    background-color: beige;
+    width: 100%;
+    min-height: 350px;
+    padding: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+}
+.depoimentos{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    gap: 22px 48px;
+    padding: 32px;
+    border-right: 2px solid black;
+}
+.depoimentos h1,
+.parte2 h1{
+    text-align: center;
+    margin-bottom: 12px;
+}
+.depoimentos h1{
+    grid-column: 1 / -1;
+}
+.parte2{
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    align-content: start;
+    gap: 22px 48px;
+    padding: 32px;
+}
+.parte2 h1{
+    grid-column: 1 / -1;
+}
+.parte2 p{
+    grid-column: 2;
+    grid-row: 2;
+    line-height: 1.6;
+}
+.parte2 img{
+    grid-column: 1;
+    grid-row: 2;
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+}
+.comentario1{
+    border: 2px solid black;
+}
+.comentario2{
+    border: 2px solid black;
+}
+.comentario3{
+    border: 2px solid black;
+}
+.comentario1,
+.comentario2,
+.comentario3{
+    min-height: 145px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.comentario1 p,
+.comentario2 p,
+.comentario3 p{
+    line-height: 1.5;
+}
+
+@media (max-width: 700px){
+    .seçao3{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .depoimentos{
+        border-right: 0;
+        border-bottom: 2px solid black;
+        padding: 28px 20px;
+        gap: 18px;
+    }
+    .parte2{
+        padding: 28px 20px;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 480px){
+    .depoimentos{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .depoimentos h1{
+        grid-column: 1;
+    }
+    .parte2{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .parte2 h1,
+    .parte2 img,
+    .parte2 p{
+        grid-column: 1;
+    }
+    .parte2 img{
+        grid-row: 2;
+        justify-self: center;
+    }
+    .parte2 p{
+        grid-row: 3;
+    }
+}
+footer{
+    background-color: brown;
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}

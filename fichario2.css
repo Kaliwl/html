@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.topo{
+    margin-top: 50px;
+    gap: 3px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+.fic1,
+.fic2,
+.fic3{
+    width: 200px;
+    height: 40px;
+    color: black;
+    border-radius: 10px 10px 0 0;
+    background-color: yellow;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.fic1 p,
+.fic2 p,
+.fic3 p{
+    position: relative;
+    top: 9px;
+}
+.retangulo{
+    width: 900px;
+    height: 500px;
+    margin-top: -2px;
+    background-color: yellow;
+    border: 2px solid black;
+}
